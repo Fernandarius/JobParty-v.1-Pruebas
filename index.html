@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JobParty — Encuentra tu próximo gran empleo</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Roboto para diseño tipo Indriver -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="JobParty - Inicio">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="24" height="24" rx="5" fill="#0456D9"/>
+          <path d="M6 13C6.66667 9.33333 9.33333 8 12 8C14.6667 8 17.3333 9.33333 18 13" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand">JobParty</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="dashboard.html">Empleos</a></li>
+          <li><a href="#">Empresas</a></li>
+          <li><a href="#">Salarios</a></li>
+          <li><a href="#">Recursos</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a href="login.html" class="btn btn-outline">Iniciar sesión</a>
+        <a href="register.html" class="btn btn-primary">Regístrate</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1 class="hero-title">Tu carrera, mejor en compañía.</h1>
+          <p class="hero-sub">Descubre oportunidades hechas para ti. Filtra por ciudad, salario y tipo de contrato. Más preciso. Más humano.</p>
+
+          <form id="hero-search" class="search" role="search" aria-label="Buscar empleos">
+            <label for="q" class="sr-only">Puesto o palabra clave</label>
+            <input id="q" name="q" type="search" placeholder="¿Qué quieres hacer? (ej. diseñador UX)" />
+
+            <label for="location" class="sr-only">Ubicación</label>
+            <input id="location" name="location" type="search" placeholder="Ciudad o región" />
+
+            <button type="submit" class="btn btn-cta">Buscar</button>
+          </form>
+
+          <div class="hero-cta">
+            <a href="dashboard.html" class="btn btn-outline">Ver empleos</a>
+            <a href="#features" class="link-muted">¿Por qué JobParty?</a>
+          </div>
+
+          <ul class="trust-list" aria-hidden="true">
+            <li>🔒 Privacidad empresarial</li>
+            <li>⚡ Resultados rápidos</li>
+            <li>📈 Insight de carreras</li>
+          </ul>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="mockup">
+            <div class="mockup-card">
+              <div class="job-tag">Tecnología</div>
+              <h3>Frontend Developer</h3>
+              <p class="muted">Acme Co. • Bogotá</p>
+              <div class="meta">$2.500 - $4.000 • Tiempo completo</div>
+            </div>
+            <div class="mockup-ornament"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <h2>Más que un buscador — una experiencia</h2>
+      <div class="features-grid">
+        <article>
+          <h3>Filtros inteligentes</h3>
+          <p>Encuentra ofertas que realmente coincidan con tu perfil.</p>
+        </article>
+        <article>
+          <h3>Perfil profesional</h3>
+          <p>Muestra tus habilidades y experiencia con un perfil limpio y verificable.</p>
+        </article>
+        <article>
+          <h3>Conexiones de calidad</h3>
+          <p>Empresas que buscan talento, no solo candidatos.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo compact" aria-label="JobParty - Inicio">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="5" fill="#0456D9"/>
+            <path d="M6 13C6.66667 9.33333 9.33333 8 12 8C14.6667 8 17.3333 9.33333 18 13" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand">JobParty</span>
+        </a>
+        <p class="muted">© 2025 JobParty. Todos los derechos reservados.</p>
+      </div>
+
+      <div>
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Síguenos</h4>
+        <div class="socials">
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

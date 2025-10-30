@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Perfil — JobParty</title>
+  <link rel="stylesheet" href="main.css">
+  <!-- Roboto para diseño tipo Indriver -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="JobParty - Inicio">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="24" height="24" rx="5" fill="#0456D9"/>
+          <path d="M6 13C6.66667 9.33333 9.33333 8 12 8C14.6667 8 17.3333 9.33333 18 13" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand">JobParty</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="dashboard.html">Empleos</a></li>
+          <li><a href="#">Empresas</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a href="login.html" class="btn btn-outline">Cerrar sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container profile">
+    <section class="profile-header">
+      <div class="avatar-area">
+        <img id="profile-pic" src="https://via.placeholder.com/120" alt="Foto de usuario" />
+        <button id="edit-profile" class="btn btn-outline">Editar perfil</button>
+      </div>
+
+      <div class="profile-info">
+        <h2 id="profile-name">Nombre Apellido</h2>
+        <p id="profile-role" class="muted">Diseñador UX • Bogotá</p>
+        <p id="profile-bio">Apasionado por crear experiencias digitales que conecten con las personas.</p>
+      </div>
+    </section>
+
+    <section class="profile-sections">
+      <div class="card">
+        <h3>Experiencia</h3>
+        <ul id="experience-list">
+          <li><strong>Senior UX Designer</strong> — Acme Co. <span class="muted">(2021 - Presente)</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Habilidades</h3>
+        <div id="skills" class="skills">
+          <span class="skill">UX</span>
+          <span class="skill">Product</span>
+          <span class="skill">Figma</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Datos personales</h3>
+        <p>Email: <span id="profile-email">user@example.com</span></p>
+        <p>Ubicación: <span id="profile-location">Bogotá, Colombia</span></p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

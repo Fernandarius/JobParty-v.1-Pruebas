@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard — JobParty</title>
+  <link rel="stylesheet" href="main.css">
+  <!-- Roboto para diseño tipo Indriver -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="JobParty - Inicio">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="24" height="24" rx="5" fill="#0456D9"/>
+          <path d="M6 13C6.66667 9.33333 9.33333 8 12 8C14.6667 8 17.3333 9.33333 18 13" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand">JobParty</span>
+      </a>
+
+      <div class="search-inline">
+        <label for="global-search" class="sr-only">Buscar empleos</label>
+        <input id="global-search" type="search" placeholder="Buscar por puesto, empresa o palabra clave" />
+      </div>
+
+      <div class="actions">
+        <a href="profile.html" class="btn btn-outline avatar">Perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container dashboard">
+    <aside class="filters" aria-label="Filtros de búsqueda">
+      <div class="filter-group">
+        <h3>Filtrar</h3>
+        <label for="category">Categoría</label>
+        <select id="category">
+          <option value="">Todas</option>
+          <option>Tecnología</option>
+          <option>Marketing</option>
+          <option>Diseño</option>
+          <option>Ventas</option>
+        </select>
+
+        <label for="city">Ciudad</label>
+        <select id="city">
+          <option value="">Todas</option>
+          <option>Bogotá</option>
+          <option>Medellín</option>
+          <option>Ciudad de México</option>
+          <option>Lima</option>
+        </select>
+
+        <label for="salary-range">Rango salarial</label>
+        <input id="salary-range" type="range" min="0" max="10000" step="100" value="5000" aria-valuemin="0" aria-valuemax="10000" />
+        <div class="salary-value">Hasta $<span id="salary-value">5000</span></div>
+
+        <button id="apply-filters" class="btn btn-secondary">Aplicar</button>
+        <button id="clear-filters" class="btn btn-outline">Limpiar</button>
+      </div>
+    </aside>
+
+    <section class="jobs-area">
+      <div class="jobs-header">
+        <h2>Ofertas</h2>
+        <div class="jobs-controls">
+          <label for="sort">Ordenar</label>
+          <select id="sort">
+            <option value="relevance">Relevancia</option>
+            <option value="date">Fecha</option>
+            <option value="salary">Salario</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="jobs-list" class="jobs-list" aria-live="polite">
+        <!-- Las tarjetas de empleo se renderizarán aquí por main.js -->
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Modal aplicar -->
+  <div id="apply-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar">×</button>
+      <h3>Aplicar a la oferta</h3>
+      <p id="apply-job-title">Cargando...</p>
+
+      <form id="apply-form">
+        <label for="applicant-name">Nombre</label>
+        <input id="applicant-name" type="text" required />
+
+        <label for="applicant-email">Email</label>
+        <input id="applicant-email" type="email" required />
+
+        <label for="applicant-cv">Mensaje / CV (opcional)</label>
+        <textarea id="applicant-cv"></textarea>
+
+        <button type="submit" class="btn btn-primary">Enviar aplicación</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
